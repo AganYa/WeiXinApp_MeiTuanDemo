@@ -1,0 +1,130 @@
+<!--pages/ProductDetails/productDetails.wxml-->
+<view class='img-view'>
+  <image class='img' src="{{bigImg}}"></image>
+</view>
+<view class='price'>
+  <view class='price-itemA'>￥
+    <text class='price-itemA-text'>131.4</text> </view>
+  <view class='price-itemB'>门市价:￥168</view>
+  <view class='price-itemC' bindtap='call'>
+    <button class='rigthBuyNow' hover-class="other-button-hover" style='  color: white'>立即抢购</button>
+  </view>
+</view>
+<view class='item'>
+  <view class='itemA'>
+    <view>
+      <image class='rightImg' src='../../images/right.png'></image> 免预约</view>
+    <view>
+      <image class='rightImg' src='../../images/right.png'></image> 过期自动退</view>
+  </view>
+  <view class='itemB'>
+    <view>
+      <image class='rightImg' src='../../images/unSelectedMy.png'></image> 已售244</view>
+  </view>
+</view>
+<view class='viewBackgroundColor'>
+</view>
+  <view class='commentItem'>
+  <view class='commentItemA stars'>★★★★★5.0分</view>
+  <view class='commentItemB'>13条评论 ></view>
+</view>
+<view class='commentItemSign'>
+  <view class='sign'>干净卫生 3</view>
+  <view class='sign'>环境优雅 3</view>
+</view> 
+<view class='viewBackgroundColor'>
+</view>
+ <view class='flex-column'>
+  <view class='sellerInfo'>商家信息</view>
+  <view class='flex-row'>
+    <view class='flex-column'>
+      <view class='contacts'>王先生和陈小姐的店（源深路店）</view>
+      <view class='detail'>王先生和陈小姐的店（源深路店）</view>
+    </view>
+    <view class='call' bindtap='call'>
+      <image class='call-img' src='../../images/call.png'></image>
+    </view>
+  </view>
+</view>
+<view class='sellerInfo'>套餐</view>
+<view class='sellerInfo center'>见证爱情锅底 3选1</view>
+<view class='flex-column'>
+  <view class='flex-row'>
+    <view class='dishStlye font-szieA '>传统经典（辣）</view>
+    <view class='dishStlye font-szieA'>
+      <view class='menu-right'>1份</view>
+      <view class='menu-right'>￥10</view>
+    </view>
+  </view>
+  <view class='flex-row'>
+    <view class='dishStlye font-szieA'>西域干拌（辣）</view>
+    <view class='dishStlye font-szieA'>
+      <view class='menu-right'>1份</view>
+      <view class='menu-right'>￥10</view>
+    </view>
+  </view>
+  <view class='flex-row'>
+    <view class='dishStlye font-szieA'>高锅汤（辣）</view>
+    <view class='dishStlye font-szieA'>
+      <view class='menu-right'>1份</view>
+      <view class='menu-right'>￥10</view>
+    </view>
+  </view>
+</view> 
+ <view class='sellerInfo'>购买须知</view>
+<view class='flex-column'>
+  <view class='notice-item-title'>有效期</view>
+  <view class='notice-item-content'>2018.3.12 至 2018.4.11（周末、法定节假日通用）</view>
+  <view class='notice-item-title'>使用时间</view>
+  <view class='notice-item-content'>10:00-22:00</view>
+  <view class='notice-item-title'>使用规则</view>
+  <view class='notice-item-content'> • 无需预约，消费高峰时可能需要等位</view>
+  <view class='notice-item-content'> • 每张美团券建议1人使用</view>
+  <view class='notice-item-content'> • 店内无包间</view>
+  <view class='notice-item-content'> • 堂食外带均可，可以打包，打包费详情咨询商家</view>
+  <view class='notice-item-content'> • 本券仅限和府捞面指定餐厅使用；（上海浦东机场店、武汉天河机场店、北京南站店、武汉群光店、南京水游城店、上海周浦万达店、镇江苏宁店、天津伊势丹店、南京虹悦城店、杭州国大店不参加本次活动）</view>
+    <view class='notice-item-content'> • 本券仅限使用1次、核销后即消失；</view>
+    <view class='notice-item-content'> • 本券不可以转赠、不可对换现金，且不能和其他优惠同时使用；</view>
+    <view class='notice-item-content'> • 请在点餐前出示本券，截屏、复制、修改都无效；</view>
+    <view class='notice-item-content'> • 产品及包装以餐厅售卖实物为准；</view>
+    <view class='notice-item-content'> • 团购用户不可同时享受商家其他优惠</view>
+    <view class='notice-item-content'> • 酒水饮料等问题，请致电商家咨询，以商家反馈为准</view>
+    <view class='notice-item-content'> • 提供免费WiFi</view>
+    <view class='notice-item-content'> • 停车位收费标准：请咨询商家</view>
+</view>  
+<view class='viewBackgroundColor'>
+</view> 
+<!--评价  -->
+  <view class='flex-row'>
+  <view class='group-title'>评价</view>
+  <view class='group-title stars'>★★★★★5.0</view>
+</view>  
+<!--评论盒子中内容  -->
+<!--总体主轴为flex-column，头像跟评分、名称、时间分别为flex-row ，评分、名称、时间为flex-column -->
+<view class='flex-column flex-border' wx:for='{{feedback}}' wx:key="item">
+  <view class='flex-row'>
+    <view class='headImg-view'>
+      <!--头像  -->
+      <image class='headImg' mode='aspectFit' src='../../images/unSelectedMy.png'></image>
+    </view>
+    <!--昵称、评分、时间  -->
+    <view class='flex-column'>
+      <view class='user-info-text'>{{item.username}}</view>
+      <view>
+        <text class='user-info-text stars'>★★★★★</text>
+        <text class='user-info-text date'>{{item.feedbacktime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='comment'>{{item.comment}}</view>
+ 
+    <view class='flex-comment-img' >
+    <view class='' wx:for='{{item.picinfo}}' wx:key='item'>
+      <image class='comment-img' mode='aspectFit' src='http://p0.meituan.net/shaitu/c3591d9996ef39996d4863025411dc76224828.jpg'></image>
+    </view>
+    <view class='flex-column'>
+    <text class='shopName'>{{item.shopname}}</text>
+    </view>
+  </view>
+
+</view>

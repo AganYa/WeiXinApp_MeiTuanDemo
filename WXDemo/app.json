@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Order/order",
+    "pages/ProductDetails/productDetails",
+    "pages/User/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "美团",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/unSelectedHone.png",
+        "selectedIconPath": "images/home.png"
+      },
+      {
+        "pagePath": "pages/Order/order",
+        "text": "订单",
+        "iconPath": "images/unSelectedOrder.png",
+        "selectedIconPath": "images/order.png"
+      },
+      {
+        "pagePath": "pages/User/user",
+        "text": "我的",
+        "iconPath": "images/unSelectedMy.png",
+        "selectedIconPath": "images/my.png"
+      }
+    ],
+    "color": "#dcdcdc",
+    "selectedColor": "#06C1AE",
+    "borderStyle": "white"
+  }
+}

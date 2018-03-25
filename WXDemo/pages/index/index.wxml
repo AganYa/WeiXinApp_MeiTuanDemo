@@ -1,0 +1,44 @@
+<!--pages/index/index.wxml-->
+
+<view class='page_row searchStlye'>
+  <view class="search">
+    <view class="df search_arr">
+      <icon class="searchcion" size='20' type='search'></icon>
+      <input placeholder="请输入关键字" bindblur='inputValue' bindinput='bindinput' bindconfirm='bindconfirm' />
+    </view>
+  </view>
+</view>
+
+<view wx:if='{{true}}' class='loading-top'> 数据加载中...</view>
+<view class='container'>
+
+  <view class='content-item' wx:for="{{inoc}}" wx:key="item" data-id='{{index}}' bindtap='alert' data-title="{{item.desc.title}}" data-content="{{item.desc.content}}">
+    <view class='raduis' style='background:{{item.color}}'>
+      <image class='ioncImg-stlye' mode='' src='{{item.path}}'></image>
+    </view>
+    <text class='inoc-des'>{{item.name}}</text>
+  </view>
+</view>
+<view class='viewBackgroundColor'>
+</view>
+<view class='like'>——猜你喜欢——</view>
+
+<view class='cell' wx:for="{{cellData}}" wx:key="item" bindtap='detail' data-url='{{item.frontImg}}'>
+  <view class='cell-LeftItem'>
+    <image class='cell-LeftImg' mode='scaleToFill' src='{{item.frontImg}}'></image>
+  </view>
+  <view class='cell-RightItem'>
+    <view class='cell-title-content'>
+      <text class='cell-title flex-grow'>{{item.title}}</text>
+      <text class='cell-location'>{{item.address}}</text>
+    </view>
+    <view class='cell-title-content'>
+      <text class='cell-price'>均价￥{{item.avgPrice}}</text>
+    </view>
+    <view class='cell-title-content'>
+      <text class='cell-commentNum'>评分：{{item.avgScore}}分</text>
+      <text class='cell-commentNum commentNumColor'> {{item.allCommentNum}}评论</text>
+    </view>
+  </view>
+</view>
+<view wx:if='{{show}}' class='loading'> 数据加载中...</view>

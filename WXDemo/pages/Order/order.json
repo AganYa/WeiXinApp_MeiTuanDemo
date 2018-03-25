@@ -1,0 +1,7 @@
+{
+  "backgroundTextStyle": "black",
+  "navigationBarBackgroundColor": "black",
+  "navigationBarTitleText": "scroll-view无限加载",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true
+}

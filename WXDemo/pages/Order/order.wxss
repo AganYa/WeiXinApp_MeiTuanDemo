@@ -1,0 +1,25 @@
+.outer{
+  display: flex;
+  flex-direction:column;
+  height: 100%;
+}
+
+.top{
+  height: 80%;
+  border: 1px solid green;
+}
+
+.block{
+  height: 80rpx;
+  width: 100%;
+  background:darkgray;
+  border:1px solid rebeccapurple;
+  margin-top:2px;
+}
+
+.setting{
+  background:lightgray;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}

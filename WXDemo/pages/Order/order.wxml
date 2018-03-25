@@ -1,0 +1,14 @@
+<!--pages/Order/order.wxml-->
+<view class="outer">
+    <view class="top">
+    <scroll-view class="scroll" scroll-top="{{scrollTop}}" scroll-into-view="{{theView}}" style="height:580px;" scroll-y="true" bindscroll="scrll"   bindscrolltolower="loadMore">
+      <view class="block" wx:for="{{listLi}}" wx:for-item="item">
+        <text id="{{item}}">{{item}}</text>
+      </view>
+    </scroll-view>
+  </view>
+    <view class="setting">
+       <button vlaue="" bindtap="gotoView">the 10th goto view</button>
+       <button vlaue="" bindtap="goTop">scroll top</button>
+    </view>
+</view>
